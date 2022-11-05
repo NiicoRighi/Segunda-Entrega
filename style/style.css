@@ -1,23 +1,24 @@
 body {
-    margin: 0;
-    padding: 0;
+    background-color: black;
+    margin: 0 auto;
+    padding: 0 auto;
 }
 
 h1 {
     text-align: center;
     font-family: arial;
-    color: black;
+    color: white;
 }
 
 h5 {
     text-align: center;
     font-family: arial;
-    color: black;
+    color: white;
 }
 
 ul {
-    border-bottom: 2px solid black;
-    border-top: 2px solid black;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
     font-family: arial;
     font-size: 20px;
     list-style-type: none;
@@ -33,122 +34,30 @@ nav li {
 
 a {
     text-decoration: none;
-    color: black;
+    color: white;
     margin: 15px;
 }
 
-main {
-    width: 95%;
+figcaption {
+    font-family: Arial;
+    font-size: 25px;
+    color: white;
 }
 
-.flex-container {
-    background-color: white;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
-    padding: 1.125em;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 75%;
-    height: 1.125em;
-    margin: 0 auto;
-}
-
-#menu {
-    background-color: white;
-    grid-area: menu;
-    display: flex;
-}
-
-.menu {
-    list-style-type: none;
-    display: flex;
-    font-family: arial;
-    font-size: 1.125em;
-    text-decoration: none;
-    color: black;
-    width: 3.125em;
-    height: 1.125em;
-}
-
-.menu:hover {
-    color: red;
-    font-weight: bold;
-}
-
-#pantalla {
-    background-color: white;
-    grid-area: pantalla;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.portada {
-    background-image: url(../photos/portadawhite.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#section__blanco {
-    margin: auto;
-    max-width: 700px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-#section__blanco {
-    margin: auto;
-    max-width: 700px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-#section__blanco__card {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-family: arial;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.responsive__img {
-    height: auto;
+footer {
+    background-color: rgb(145, 145, 145);
+    position: absolute;
     width: 100%;
-    border-radius: 10px;
-    max-width: 500px;
-}
-
-.consulta {
-    font-family: 'Trebuchet MS', Arial, sans-serif;
-    font-size: 15px;
+    height: 40px;
+    color: black;
     text-align: center;
-}
-
-.completar {
-    width: 300px;
-    height: 25px;
-}
-
-.escribir {
-    width: 300px;
-    height: 150px;
-}
-
-#section__camara {
-    background-color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+    word-spacing: 1px
 }
 
 #section__camara__contenedor {
-    color: black;
+    color: white;
     display: grid;
     padding: 20px;
     grid-template-areas:
@@ -164,18 +73,18 @@ main {
     grid-area: texto1;
     font-family: arial;
     font-size: 15px;
-    color: black;
+    color: white;
 }
 
 #section__camara__titulo {
     grid-area: titulo;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     align-self: center;
     font-weight: 900;
     font-size: 3rem;
-    background-image: url(../photos/nikon-front.jpg);
-    background-size: contain;
+    background-image: url(../photos/nikon-post.jpg);
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -184,171 +93,57 @@ main {
     grid-area: texto2;
     font-family: arial;
     font-size: 15px;
-    color: black;
-}
-
-
-
-footer {
-    display: grid;
-    position: sticky;
-    justify-content: center;
-    align-items: center;
-    grid-area: footer;
-    background-color: black;
     color: white;
-    width: 100%;
-    height: 3em;
 }
 
-#plantilla {
-    display: grid;
-    height: 100vh;
-    grid-template-areas:
-        " header"
-        " menu"
-        " pantalla"
-        " pantalla"
-        " footer";
-    grid-template-rows: 70px auto 5fr 170px;
-    grid-column-gap: 10px;
-    grid-row-gap: 0;
+.consulta {
+    font-family: arial;
+    font-size: 15px;
+    text-align: center;
+}
+
+.completar {
+    width: 300px;
+    height: 25px;
+}
+
+.escribir {
+    width: 300px;
+    height: 150px;
 }
 
 /* Estilos responsive */
 
-@media screen and (max-width: 760px) {
-    body {
-        background-color: black;
-    }
-
-    #plantilla {
-        grid-template-areas:
-            " header"
-            /* 100px */
-            " menu"
-            /* 2fr */
-            " pantalla"
-            /* 3fr */
-            " pantalla"
-            /* 3fr */
-            " footer";
-        /* 170px */
-        grid-template-rows: 35px auto 4fr 35px;
-        grid-row-gap: 0;
-    }
-
-    header {
-        grid-area: header;
-        background-color: black;
-        color: white;
-        font-size: 0.75em;
-    }
-
-    .flex-container {
-        background-color: black;
-        border-top: 2px solid white;
-        border-bottom: 2px solid white;
-        padding: 10px;
-        display: flex;
-        width: 95%;
-    }
-
-    #menu {
-        background-color: black;
-    }
-
-    .menu {
-        font-size: 0.625em;
-        color: white;
-    }
-
-    #pantalla {
-        background-color: black;
-        color: white;
-    }
-
-    .portada {
-        background-image: url(../photos/portadablack.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    #section__blanco__card {
-        width: 400px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        font-family: arial;
+@media screen and (max-width: 500px) {
+    h5 {
         font-size: 10px;
     }
 
-    .consulta {
-        font-family: 'Trebuchet MS', Arial, sans-serif;
+    ul {
+        border-bottom: 1px solid white;
+        border-top: 1px solid white;
         font-size: 10px;
-        text-align: center;
-    }
-
-    .completar {
-        width: 150px;
-        height: 15px;
-    }
-
-    .escribir {
-        width: 150px;
-        height: 75px;
-    }
-
-    #section__camara {
-        background-color: black;
     }
 
     #section__camara__contenedor {
-        color: black;
-        display: grid;
-        padding: 20px;
+        padding: 5px;
         grid-template-areas:
-            "texto1 texto1 texto1"
-            "titulo titulo titulo"
-            "texto2 texto2 texto2";
-        grid-template-columns: repeat(3, 2fr);
-        grid-template-rows: repeat(3, 2fr);
-        margin: 0 auto;
+            "texto1"
+            "titulo"
+            "texto2";
+        grid-template-columns: 1fr;
+        margin: 5px;
     }
 
     #section__camara__texto1 {
-        grid-area: texto1;
-        font-family: arial;
-        font-size: 15px;
-        color: white;
-    }
-
-    #section__camara__titulo {
-        grid-area: titulo;
-        width: 300px;
-        height: 300px;
-        align-self: center;
-        font-weight: 900;
-        font-size: 3rem;
-        background-image: url(../photos/nikon-post.jpg);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+        font-size: 10px;
     }
 
     #section__camara__texto2 {
-        grid-area: texto2;
-        font-family: arial;
-        font-size: 15px;
-        color: white;
+        font-size: 10px;
     }
-
-    footer {
-        background-color: gray;
-        color: white;
-        font-size: 5px;
-        width: 100%;
-        height: 20px;
+    #section__camara__titulo {
+        font-size: 20px;;
+        height: 100px;
     }
 }
